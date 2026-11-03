@@ -21,16 +21,16 @@ const MyPlanCard = () => {
     const [isActive, setIsActive] = useState("Today's_plan");
     return (
         <div className="container mx-auto  my-8">
-            <div className="my-5">
+            <div className="my-5 inline-flex rounded-full bg-[#151820] p-2">
                 <button
                     onClick={() => setIsActive("Today's_plan")}
-                    className={` ${isActive === "Today's_plan" ? "btn btn-success" : "btn"}`}
+                    className={` rounded-full rounded-r-none ${isActive === "Today's_plan" ? "btn btn-success" : "btn"}`}
                 >
                     Today's Plan
                 </button>
                 <button
                     onClick={() => setIsActive("Saved")}
-                    className={` ${isActive === "Saved" ? "btn btn-success" : "btn"}`}
+                    className={`  rounded-full rounded-l-none ${isActive === "Saved" ? "btn btn-success" : "btn"}`}
                 >
                     Saved
                 </button>

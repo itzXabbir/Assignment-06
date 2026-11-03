@@ -38,10 +38,48 @@ const NavButton = () => {
         </ul>
     );
 };
-
-const Navbar = () => {
+const TrackButton = () => {
     const { planToday, planSaved } = useContext(LibraryContext);
 
+    const pathname = usePathname();
+    return (
+        <ul className="flex items-center gap-2 text-xs sm:gap-4">
+            <li className="rounded-2xl px-2 sm:px-3">
+                <Link
+                    href="/my_plan"
+                    className={`transition-colors ${
+                        pathname === "/my_plan"
+                            ? "text-white font-semibold"
+                            : "text-[#9CA3AF] hover:text-white"
+                    }`}
+                >
+                    Plan{" "}
+                    <span className="rounded-xl bg-[#c2f800] px-1 text-xs text-black">
+                        {planToday.length}
+                    </span>
+                </Link>
+            </li>
+
+            <li className="rounded-2xl px-2 sm:px-3">
+                <Link
+                    href="/my_plan"
+                    className={`transition-colors ${
+                        pathname === "/my_plan"
+                            ? "text-white font-semibold"
+                            : "text-[#9CA3AF] hover:text-white"
+                    }`}
+                >
+                    Saved{" "}
+                    <span className="rounded-xl border border-zinc-400 px-1 text-xs text-zinc-400">
+                        {planSaved.length}
+                    </span>
+                </Link>
+            </li>
+        </ul>
+    );
+};
+
+const Navbar = () => {
     return (
         <div className="w-full bg-[#0C0D10] text-white border border-zinc-900 font-inter">
             <section className="container mx-auto flex h-auto min-h-20 w-full flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:flex-nowrap lg:px-8">
@@ -62,21 +100,9 @@ const Navbar = () => {
                 </Suspense>
 
                 {/* Plan and Saved */}
-                <ul className="flex items-center gap-2 text-xs sm:gap-4">
-                    <li className="rounded-2xl px-2 text-white sm:px-3">
-                        <a href="#">Plan</a>{" "}
-                        <span className="rounded-xl bg-[#c2f800] px-1 text-xs text-black">
-                            {planToday.length}
-                        </span>
-                    </li>
-
-                    <li className="text-[#9CA3AF]">
-                        <a href="#">Saved</a>{" "}
-                        <span className="rounded-xl border border-zinc-400 px-1 text-xs text-zinc-400">
-                            {planSaved.length}
-                        </span>
-                    </li>
-                </ul>
+                <Suspense fallback={<h2>Loading... Button</h2>}>
+                    <TrackButton />
+                </Suspense>
             </section>
         </div>
     );
