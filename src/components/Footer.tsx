@@ -3,8 +3,8 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div className="w-full shrink-0  bg-[#0C0D10] border  border-b-zinc-800 font-inter">
-            <section className=" bottom-0 left-0 flex items-center justify-between px-5 right-0 h-20   container mx-auto ">
+        <div className="w-full shrink-0  bg-[#0C0D10] border  border-zinc-900 font-inter">
+            <section className=" bottom-0 left-0 flex items-center justify-between px-5 right-0 h-15   container mx-auto ">
                 <div className="flex gap-3">
                     <Image
                         alt="logo-png"
@@ -12,7 +12,7 @@ const Footer = () => {
                         height={28}
                         src="/logo.png"
                     ></Image>
-                    <span className="text-white font-oswald text-2xl font-bold">
+                    <span className="text-white font-oswald text-xl font-bold">
                         FITLOG
                     </span>
                 </div>

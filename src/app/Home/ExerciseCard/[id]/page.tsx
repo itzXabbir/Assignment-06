@@ -1,7 +1,8 @@
 import React, { ReactNode, Suspense } from "react";
 import type { IExercise } from "@/type/exercise";
 import Loading from "../../loading";
-import AddToButton from "@/app/EventListeners/page";
+import AddToButton from "@/components/EventListeners/AddToButton";
+import SavedButton from "@/components/EventListeners/SaveButton";
 interface IParamsProps {
     params: ReactNode;
 }
@@ -119,12 +120,7 @@ const IndividualCard = async ({ params }) => {
                     <div className="mt-7 flex flex-wrap items-center gap-3">
                         <AddToButton data={data} />
 
-                        <button
-                            type="button"
-                            className="rounded-lg border border-[#343946] px-4 py-2.5 text-xs font-medium text-gray-300"
-                        >
-                            Save for later
-                        </button>
+                        <SavedButton data={data} />
                     </div>
                 </div>
             </div>

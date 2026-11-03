@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Banner = () => {
     return (
@@ -15,9 +16,11 @@ const Banner = () => {
                     lock it <br />
                     into today's plan, and watch the week's work add up.
                 </p>
-                <button className="btn text-[#15171d] font-semibold font-inter  bg-[#c2f800]">
-                    BROWSE SUCCESS
-                </button>
+                <Link href="/my_plan">
+                    <button className="btn text-[#15171d] font-semibold font-inter  bg-[#c2f800]">
+                        BROWSE SUCCESS
+                    </button>
+                </Link>
             </div>
             <Image
                 src="/banner.png"

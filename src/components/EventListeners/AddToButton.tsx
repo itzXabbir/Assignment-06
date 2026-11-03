@@ -5,14 +5,16 @@ import { IExercise } from "@/type/exercise";
 import { useContext } from "react";
 import { toast } from "react-toastify";
 
-const AddToButton = ({ data }: { datat: IExercise }) => {
+const AddToButton = ({ data }: { data: IExercise }) => {
     const { planToday, setPlanToday } = useContext(LibraryContext);
     const handleAddToButton = () => {
-        // alert("Add to button clicked");
-        toast.success("Added to button ");
-        // setPlanToday((prev) => [...prev, data]);
-        setPlanToday([...planToday, data]);
-        console.log("planToday, ", planToday, "length", planToday.length);
+        const alreadyAdded = planToday.some((item) => item.id === data.id);
+        if (alreadyAdded) {
+            toast.error("Already added to today's plan.");
+            return;
+        }
+        setPlanToday((prev) => [...prev, data]);
+        toast.success("Added button successfully");
     };
     return (
         <>
