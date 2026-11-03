@@ -4,10 +4,10 @@ import Loading from "../../loading";
 import AddToButton from "@/components/EventListeners/AddToButton";
 import SavedButton from "@/components/EventListeners/SaveButton";
 interface IParamsProps {
-    params: ReactNode;
+    params: Promise<{ id: string }>;
 }
 
-const IndividualCard = async ({ params }) => {
+const IndividualCard = async ({ params }: IParamsProps) => {
     const { id } = await params;
     console.log("This is id", id);
     const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${id}`);
@@ -128,7 +128,7 @@ const IndividualCard = async ({ params }) => {
     );
 };
 
-const DynamicCard = async ({ params }) => {
+const DynamicCard = async ({ params }: IParamsProps) => {
     return (
         <Suspense fallback={<Loading />}>
             <IndividualCard params={params} />
