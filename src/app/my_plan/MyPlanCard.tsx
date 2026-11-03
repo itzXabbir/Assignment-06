@@ -9,8 +9,10 @@ import { toast } from "react-toastify";
 const MyPlanCard = () => {
     const { planToday, planSaved } = useContext(LibraryContext);
     const { setPlanToday, setPlanSaved } = useContext(LibraryContext);
-    console.log("Her is the card:", planToday);
-    console.log("Her is the Saved plan:", planSaved);
+    // const [isActive, setIsActive] = useState("Today's_plan");
+    const { isActive, setIsActive } = useContext(LibraryContext);
+    console.log("Here is the card:", planToday);
+    console.log("Here is the Saved plan:", planSaved);
     const handleRemove = (id: number) => {
         setPlanToday((prev: IExercise[]) =>
             prev.filter((item: IExercise) => item.id !== id),
@@ -18,7 +20,6 @@ const MyPlanCard = () => {
         toast.info("Your card has been removedf");
     };
 
-    const [isActive, setIsActive] = useState("Today's_plan");
     return (
         <div className="container mx-auto  my-8">
             <div className="my-5 inline-flex rounded-full bg-[#151820] p-2">

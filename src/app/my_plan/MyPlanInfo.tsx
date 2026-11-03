@@ -3,8 +3,10 @@ import { IExercise } from "@/type/exercise";
 import React, { useContext } from "react";
 
 const MyPlanInfo = () => {
-    const { planToday } = useContext(LibraryContext);
-    console.log("Here is the info:", planToday);
+    const { planToday, planSaved, isActive } = useContext(LibraryContext);
+    const activeList: IExercise[] =
+        isActive === "Today's_plan" ? planToday : planSaved;
+    console.log("Here is the info:", activeList);
 
     return (
         <div className="container mx-auto mt-10">
@@ -22,7 +24,7 @@ const MyPlanInfo = () => {
                             Exercises
                         </p>
                         <p className="font-oswald font-bold text-[40px] leading-none text-[#BFFF00]">
-                            {planToday.length}
+                            {activeList.length}
                         </p>
                     </div>
 
@@ -32,7 +34,7 @@ const MyPlanInfo = () => {
                             Minutes
                         </p>
                         <p className="font-oswald font-bold text-[40px] leading-none text-white">
-                            {planToday.reduce(
+                            {activeList.reduce(
                                 (total: number, exercise: IExercise) =>
                                     total + exercise.duration,
                                 0,
@@ -46,7 +48,7 @@ const MyPlanInfo = () => {
                             Calories
                         </p>
                         <p className="font-oswald font-bold text-[40px] leading-none text-white">
-                            {planToday.reduce(
+                            {activeList.reduce(
                                 (total: number, exercise: IExercise) =>
                                     total + exercise.caloriesBurned,
                                 0,
