@@ -1,8 +1,8 @@
 import React, { ReactNode, Suspense } from "react";
 import type { IExercise } from "@/type/exercise";
-import Loading from "../../loading";
-import AddToButton from "@/EventListeners/AddToButton";
-import SavedButton from "@/EventListeners/SaveButton";
+import Loading from "../loading";
+import AddToButton from "@/components/Hooks/AddToButton";
+import SavedButton from "@/components/Hooks/SaveButton";
 interface IParamsProps {
     params: Promise<{ id: string }>;
 }

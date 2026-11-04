@@ -3,7 +3,7 @@ import { ArrowRight, Clock3, Flame, Star } from "lucide-react";
 import { IExercise } from "@/type/exercise";
 import Link from "next/link";
 
-const ExerciseLibraryCard = async ({ exercise }: { exercise: IExercise }) => {
+const ExerciseLibraryCard = ({ exercise }: { exercise: IExercise }) => {
     return (
         <Link
             href={`/Home/ExerciseCard/${exercise.id}`}
@@ -111,3 +111,4 @@ const ExerciseLibraryCard = async ({ exercise }: { exercise: IExercise }) => {
     );
 };
 export default ExerciseLibraryCard;
+// src\components\shared\ExerciseLibraryCard.tsx

@@ -1,7 +1,7 @@
 import type { IExercise } from "@/type/exercise";
 import { Suspense } from "react";
 import Loading from "../loading";
-import ExerciseLibraryCard from "@/components/ExerciseLibraryCard";
+import ExerciseLibraryCard from "@/components/shared/ExerciseLibraryCard";
 
 const FitnessCard = async () => {
     const res = await fetch("https://api.abcz.workers.dev/api/fitlog");

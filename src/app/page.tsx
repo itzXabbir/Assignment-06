@@ -1,5 +1,5 @@
-import FitnessCard from "./Home/FitnessInfo/page";
-import Banner from "./Home/BannerSection/page";
+import FitnessCard from "./FitnessInfo/page";
+import Banner from "../components/Homepage/Banner";
 
 // const DataSet = async () => {};
 
