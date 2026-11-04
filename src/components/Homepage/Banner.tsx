@@ -16,11 +16,11 @@ const Banner = () => {
                     lock it <br />
                     into today's plan, and watch the week's work add up.
                 </p>
-                <Link href="/my_plan">
+                <a href="#FitnessInfo">
                     <button className="btn text-[#15171d] font-semibold font-inter  bg-[#c2f800]">
                         BROWSE SUCCESS
                     </button>
-                </Link>
+                </a>
             </div>
             <Image
                 src="/banner.png"

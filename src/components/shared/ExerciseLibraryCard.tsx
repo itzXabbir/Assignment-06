@@ -6,7 +6,7 @@ import Link from "next/link";
 const ExerciseLibraryCard = ({ exercise }: { exercise: IExercise }) => {
     return (
         <Link
-            href={`/Home/ExerciseCard/${exercise.id}`}
+            href={`/${exercise.id}`}
             className="group  flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 transition-all duration-300 hover:border-red-500/40 hover:shadow-xl hover:shadow-red-500/5"
         >
             {/* Exercise Image */}
@@ -111,4 +111,3 @@ const ExerciseLibraryCard = ({ exercise }: { exercise: IExercise }) => {
     );
 };
 export default ExerciseLibraryCard;
-// src\components\shared\ExerciseLibraryCard.tsx

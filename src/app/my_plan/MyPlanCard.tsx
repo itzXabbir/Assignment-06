@@ -13,8 +13,14 @@ const MyPlanCard = () => {
     const { isActive, setIsActive } = useContext(LibraryContext);
     console.log("Here is the card:", planToday);
     console.log("Here is the Saved plan:", planSaved);
-    const handleRemove = (id: number) => {
+    const handleToastRemove1 = (id: number) => {
         setPlanToday((prev: IExercise[]) =>
+            prev.filter((item: IExercise) => item.id !== id),
+        );
+        toast.info("Your card has been removedf");
+    };
+    const handleToastRemove2 = (id: number) => {
+        setPlanSaved((prev: IExercise[]) =>
             prev.filter((item: IExercise) => item.id !== id),
         );
         toast.info("Your card has been removedf");
@@ -90,9 +96,7 @@ const MyPlanCard = () => {
 
                                   {/* Action Buttons */}
                                   <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:ml-auto shrink-0">
-                                      <Link
-                                          href={`/Home/ExerciseCard/${plans.id}`}
-                                      >
+                                      <Link href={`/${plans.id}`}>
                                           <button className="px-3 py-2 sm:px-5 sm:py-2.5 rounded-full border border-slate-700 text-xs sm:text-sm font-medium text-white hover:bg-slate-800 transition-colors">
                                               View Details
                                           </button>
@@ -104,7 +108,9 @@ const MyPlanCard = () => {
                                       </button>
 
                                       <button
-                                          onClick={() => handleRemove(plans.id)}
+                                          onClick={() =>
+                                              handleToastRemove1(plans.id)
+                                          }
                                           className="px-1 text-slate-500 text-xl hover:text-white transition-colors"
                                       >
                                           <Trash2 size={18} />
@@ -170,12 +176,16 @@ const MyPlanCard = () => {
 
                                   {/* Action Buttons */}
                                   <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:ml-auto shrink-0">
-                                      <button className="px-3 py-2 sm:px-5 sm:py-2.5 rounded-full border border-slate-700 text-xs sm:text-sm font-medium text-white hover:bg-slate-800 transition-colors">
-                                          View Details
-                                      </button>
+                                      <Link href={`/${plans.id}`}>
+                                          <button className="px-3 py-2 sm:px-5 sm:py-2.5 rounded-full border border-slate-700 text-xs sm:text-sm font-medium text-white hover:bg-slate-800 transition-colors">
+                                              View Details
+                                          </button>
+                                      </Link>
 
                                       <button
-                                          onClick={() => handleRemove(plans.id)}
+                                          onClick={() =>
+                                              handleToastRemove2(plans.id)
+                                          }
                                           className="px-1 text-slate-500 text-xl hover:text-white transition-colors"
                                       >
                                           <Trash2 size={18} />
