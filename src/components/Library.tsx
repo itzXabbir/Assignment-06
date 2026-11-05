@@ -11,7 +11,7 @@ const FitnessCard = async () => {
     return (
         <div
             id="FitnessInfo"
-            className="container border-2 border-red-500 my-10 mx-auto grid w-full grid-cols-1 items-stretch gap-5 px-4 py-8 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8 xl:px-0"
+            className="container  my-10 mx-auto grid w-full grid-cols-1 items-stretch gap-5 px-4 py-8 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8 xl:px-0"
         >
             {data.map((exercise: IExercise) => (
                 <ExerciseLibraryCard key={exercise.id} exercise={exercise} />
