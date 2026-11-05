@@ -10,6 +10,7 @@ const MyPlanCard = () => {
     const { planToday, planSaved } = useContext(LibraryContext);
     const { setPlanToday, setPlanSaved } = useContext(LibraryContext);
     const { isActive, setIsActive } = useContext(LibraryContext);
+    const [completedIds, setCompletedIds] = useState<number[]>([]);
     const [sortBy, setSortBy] = useState<
         "duration" | "caloriesBurned" | "rating"
     >("duration");
@@ -57,8 +58,9 @@ const MyPlanCard = () => {
             theme: "dark",
         });
     };
-    const handleShowtoast = () => {
-        toast.info(" You have completed your workout.", {
+    const handleMarkDone = (id: number) => {
+        setCompletedIds((prev) => [...prev, id]);
+        toast.info("You have completed your workout.", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -167,11 +169,26 @@ const MyPlanCard = () => {
                                       </Link>
 
                                       <button
-                                          onClick={() => handleShowtoast()}
-                                          className="flex items-center gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-full bg-lime-400 text-black text-xs sm:text-sm font-bold hover:bg-lime-300 transition-colors"
+                                          onClick={() =>
+                                              handleMarkDone(plans.id)
+                                          }
+                                          disabled={completedIds.includes(
+                                              plans.id,
+                                          )}
+                                          className={`flex items-center gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-colors ${
+                                              completedIds.includes(plans.id)
+                                                  ? "bg-slate-700 text-slate-300 cursor-not-allowed"
+                                                  : "bg-lime-400 text-black hover:bg-lime-300"
+                                          }`}
                                       >
-                                          <span>✓</span>
-                                          Mark as Done
+                                          <span>
+                                              {completedIds.includes(plans.id)
+                                                  ? "✓"
+                                                  : "✓"}
+                                          </span>
+                                          {completedIds.includes(plans.id)
+                                              ? "Completed"
+                                              : "Mark as Done"}
                                       </button>
 
                                       <button

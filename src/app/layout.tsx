@@ -39,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             // className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
             className={`${oswald.variable} ${inter.variable}`}
         >
-            <body className="min-h-screen bg-[#111827]">
+            <body className="min-h-screen bg-[#111827] ">
                 <LibraryProvider>
                     <div className="flex flex-col min-h-screen">
                         <Navbar />
