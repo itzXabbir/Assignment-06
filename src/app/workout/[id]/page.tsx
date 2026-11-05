@@ -1,6 +1,6 @@
 import React, { ReactNode, Suspense } from "react";
-import type { IExercise } from "@/type/exercise";
-import Loading from "../loading";
+import type { IExercise } from "@/types/exercise";
+import Loading from "../../loading";
 import AddToButton from "@/components/Hooks/AddToButton";
 import SavedButton from "@/components/Hooks/SaveButton";
 interface IParamsProps {

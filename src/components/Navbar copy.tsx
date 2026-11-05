@@ -95,7 +95,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Navigation */}
-                <Suspense fallback={<h2>Loading... Button</h2>}>
+                <Suspense fallback={<h2>Loading workouts...</h2>}>
                     <NavButton />
                 </Suspense>
 

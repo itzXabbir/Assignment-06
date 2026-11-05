@@ -1,7 +1,8 @@
 "use client";
 
 import { LibraryContext } from "@/context/LibraryContext";
-import { IExercise } from "@/type/exercise";
+import { IExercise } from "@/types/exercise";
+import { Plus } from "lucide-react";
 import { useContext } from "react";
 import { toast } from "react-toastify";
 
@@ -20,9 +21,10 @@ const AddToButton = ({ data }: { data: IExercise }) => {
         <>
             <button
                 type="button"
-                className="rounded-lg bg-[#c5ff00] cursor-pointer px-4 py-2.5 text-xs font-bold text-black"
+                className="flex items-center gap-2 rounded-lg bg-[#c5ff00] cursor-pointer px-4 py-2.5 text-xs font-bold text-black"
                 onClick={() => handleAddToButton()}
             >
+                <Plus size={14} />
                 Add to today's
             </button>
         </>

@@ -1,5 +1,5 @@
 "use client";
-import { IExercise } from "@/type/exercise";
+import { IExercise } from "@/types/exercise";
 import React, { createContext, ReactNode, useState } from "react";
 export interface ILibraryType {
     planToday: IExercise[];

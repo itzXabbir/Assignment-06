@@ -1,5 +1,5 @@
 import { LibraryContext } from "@/context/LibraryContext";
-import { IExercise } from "@/type/exercise";
+import { IExercise } from "@/types/exercise";
 import { Trash2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -96,7 +96,7 @@ const MyPlanCard = () => {
 
                                   {/* Action Buttons */}
                                   <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:ml-auto shrink-0">
-                                      <Link href={`/${plans.id}`}>
+                                      <Link href={`workout/${plans.id}`}>
                                           <button className="px-3 py-2 sm:px-5 sm:py-2.5 rounded-full border border-slate-700 text-xs sm:text-sm font-medium text-white hover:bg-slate-800 transition-colors">
                                               View Details
                                           </button>
@@ -176,7 +176,7 @@ const MyPlanCard = () => {
 
                                   {/* Action Buttons */}
                                   <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:ml-auto shrink-0">
-                                      <Link href={`/${plans.id}`}>
+                                      <Link href={`workout/${plans.id}`}>
                                           <button className="px-3 py-2 sm:px-5 sm:py-2.5 rounded-full border border-slate-700 text-xs sm:text-sm font-medium text-white hover:bg-slate-800 transition-colors">
                                               View Details
                                           </button>

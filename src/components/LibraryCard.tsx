@@ -1,12 +1,19 @@
+"use client";
 import Image from "next/image";
 import { ArrowRight, Clock3, Flame, Star } from "lucide-react";
-import { IExercise } from "@/type/exercise";
+import { IExercise } from "@/types/exercise";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 const ExerciseLibraryCard = ({ exercise }: { exercise: IExercise }) => {
+    const showToast = () => {
+        // Implement your toast logic here
+        toast.info(` ${exercise.name} clicked!`);
+    };
     return (
         <Link
-            href={`/${exercise.id}`}
+            onClick={() => showToast()}
+            href={`/workout/${exercise.id}`}
             className="group  flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 transition-all duration-300 hover:border-red-500/40 hover:shadow-xl hover:shadow-red-500/5"
         >
             {/* Exercise Image */}

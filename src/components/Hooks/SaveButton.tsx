@@ -1,7 +1,8 @@
 "use client";
 
 import { LibraryContext } from "@/context/LibraryContext";
-import { IExercise } from "@/type/exercise";
+import { IExercise } from "@/types/exercise";
+import { Bookmark } from "lucide-react";
 import { useContext, useEffect } from "react";
 import { toast } from "react-toastify";
 
@@ -23,9 +24,10 @@ const SavedButton = ({ data }: { data: IExercise }) => {
         <>
             <button
                 type="button"
-                className="rounded-lg border cursor-pointer border-[#343946] px-4 py-2.5 text-xs font-medium text-gray-300"
+                className="flex items-center gap-2 rounded-lg border cursor-pointer border-[#343946] px-4 py-2.5 text-xs font-medium text-gray-300"
                 onClick={() => handleAddToButton()}
             >
+                <Bookmark size={14} />
                 Save for later
             </button>
         </>

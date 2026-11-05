@@ -1,5 +1,5 @@
 import { LibraryContext } from "@/context/LibraryContext";
-import { IExercise } from "@/type/exercise";
+import { IExercise } from "@/types/exercise";
 import React, { useContext } from "react";
 
 const MyPlanInfo = () => {
