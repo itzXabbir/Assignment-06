@@ -267,7 +267,7 @@ const MyPlanCard = () => {
             {isActive === "Today's_plan" && sortedPlanToday.length === 0 && (
                 <div className="container mx-auto my-8 ">
                     <div className="flex min-h-[365px] flex-col items-center justify-center rounded-2xl border border-dashed border-[#252830] bg-[#0C0D10] px-4 text-center">
-                        <h2 className="font-oswald text-2xl font-bold text-white">
+                        <h2 className="font-display text-2xl font-bold text-white">
                             NOTHING HERE YET
                         </h2>
 
@@ -289,7 +289,7 @@ const MyPlanCard = () => {
             {isActive === "Saved" && sortedPlanSaved.length === 0 && (
                 <div className="container mx-auto my-8 ">
                     <div className="flex min-h-[365px] flex-col items-center justify-center rounded-2xl border border-dashed border-[#252830] bg-[#0C0D10] px-4 text-center">
-                        <h2 className="font-oswald text-2xl font-bold text-white">
+                        <h2 className="font-display text-2xl font-bold text-white">
                             NOTHING HERE YET
                         </h2>
 

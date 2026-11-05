@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 const oswald = Oswald({
     subsets: ["latin"],
     weight: ["200", "300", "400", "500", "600", "700"],
-    variable: "--font-oswald",
+    variable: "--font-display",
 });
 
 const inter = Inter({

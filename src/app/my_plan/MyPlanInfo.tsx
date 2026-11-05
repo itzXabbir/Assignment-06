@@ -10,7 +10,7 @@ const MyPlanInfo = () => {
 
     return (
         <div className="container mx-auto mt-10">
-            <p className="font-oswald font-bold text-3xl mb-4 text-white ">
+            <p className="font-display font-bold text-3xl mb-4 text-white ">
                 MY PLAN
             </p>
             <p className="font-inter text-[#8A92A0] ">
@@ -23,7 +23,7 @@ const MyPlanInfo = () => {
                         <p className="font-inter text-[#8A92A0] text-base mb-2">
                             Exercises
                         </p>
-                        <p className="font-oswald font-bold text-[40px] leading-none text-[#BFFF00]">
+                        <p className="font-display font-bold text-[40px] leading-none text-[#BFFF00]">
                             {activeList.length}
                         </p>
                     </div>
@@ -33,7 +33,7 @@ const MyPlanInfo = () => {
                         <p className="font-inter text-[#8A92A0] text-base mb-2">
                             Minutes
                         </p>
-                        <p className="font-oswald font-bold text-[40px] leading-none text-white">
+                        <p className="font-display font-bold text-[40px] leading-none text-white">
                             {activeList.reduce(
                                 (total: number, exercise: IExercise) =>
                                     total + exercise.duration,
@@ -47,7 +47,7 @@ const MyPlanInfo = () => {
                         <p className="font-inter text-[#8A92A0] text-base mb-2">
                             Calories
                         </p>
-                        <p className="font-oswald font-bold text-[40px] leading-none text-white">
+                        <p className="font-display font-bold text-[40px] leading-none text-white">
                             {activeList.reduce(
                                 (total: number, exercise: IExercise) =>
                                     total + exercise.caloriesBurned,

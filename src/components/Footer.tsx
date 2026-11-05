@@ -12,7 +12,7 @@ const Footer = () => {
                         height={28}
                         src="/logo.png"
                     ></Image>
-                    <span className="text-white font-oswald text-xl font-bold">
+                    <span className="text-white font-display text-xl font-bold">
                         FITLOG
                     </span>
                 </div>
@@ -40,7 +40,7 @@ export default Footer;
 //                         height={28}
 //                         src="/logo.png"
 //                     ></Image>
-//                     <span className="text-white font-oswald text-xl font-bold">
+//                     <span className="text-white font-display text-xl font-bold">
 //                         FITLOG
 //                     </span>
 //                 </div>

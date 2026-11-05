@@ -84,7 +84,7 @@ const Navbar = () => {
         <div className="w-full bg-[#0C0D10] text-white border border-zinc-900 font-inter">
             <section className="container mx-auto flex h-auto min-h-20 w-full flex-wrap items-center justify-center gap-3 px-4 py-3 sm:justify-between sm:px-6 lg:flex-nowrap lg:px-8">
                 {/* Logo */}
-                <div className="flex flex-row items-center gap-2 font-oswald">
+                <div className="flex flex-row items-center gap-2 font-display">
                     <Image
                         src="/logo.png"
                         width={28}
@@ -196,7 +196,7 @@ export default Navbar;
 //         <div className="w-full bg-[#0C0D10] text-white border border-zinc-900 font-inter">
 //             <section className="container mx-auto flex h-auto min-h-20 w-full flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:flex-nowrap lg:px-8">
 //                 {/* Logo */}
-//                 <div className="flex flex-row items-center gap-2 font-oswald">
+//                 <div className="flex flex-row items-center gap-2 font-display">
 //                     <Image
 //                         src="/logo.png"
 //                         width={28}

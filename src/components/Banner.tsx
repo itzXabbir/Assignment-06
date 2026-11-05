@@ -8,7 +8,7 @@ const Banner = () => {
                 <p className="text-xm text-[#c2f800] mb-5 font-semibold">
                     WORKOUT LIBRARY
                 </p>
-                <p className="text-5xl font-oswald font-bold mb-5 max-w-md">
+                <p className="text-5xl font-display font-bold mb-5 max-w-md">
                     TRAIN WITH INTENT. LOG EVERY SET.
                 </p>
                 <p className="text-xm font-inter text-[#9CA3AF] mb-5">

@@ -8,7 +8,7 @@ const Home = async () => {
         <div className="text-white">
             <Banner />
             <div className="container mx-auto   ">
-                <p className=" font-oswald text-2xl font-bold">THE LIBRARY</p>
+                <p className=" font-display text-2xl font-bold">THE LIBRARY</p>
                 <p className=" text-normal mt-2 text-[#969797]">
                     Twelve lifts covering every major muscle group.
                 </p>
