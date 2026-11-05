@@ -98,7 +98,7 @@ const MyPlanCard = () => {
                                     | "rating",
                             )
                         }
-                        className="select select-bordered select-sm w-25"
+                        className="select select-bordered select-sm w-25 "
                     >
                         <option value="duration">Duration</option>
                         <option value="caloriesBurned">Calories</option>
