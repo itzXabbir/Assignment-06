@@ -42,8 +42,8 @@ const MyPlanCard = () => {
 
     return (
         <div className="container mx-auto  my-8">
-            <section className="flex justify-between items-center bg-emerald-300">
-                <div className="my-5 inline-flex rounded-full bg-[#151820] p-2">
+            <section className="flex px-3 justify-between items-center ">
+                <div className="my-2 inline-flex rounded-full bg-[#151820] p-2">
                     <button
                         onClick={() => setIsActive("Today's_plan")}
                         className={` rounded-full rounded-r-none ${isActive === "Today's_plan" ? "btn btn-success" : "btn"}`}
@@ -57,7 +57,7 @@ const MyPlanCard = () => {
                         Saved
                     </button>
                 </div>
-                <div className="my-5 inline-flex rounded-xl bg-[#151820] p-2">
+                <div className="my-2 inline-flex rounded-xl bg-[#151820] p-2">
                     <select
                         value={sortBy}
                         onChange={(e) =>
