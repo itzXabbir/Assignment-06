@@ -31,13 +31,43 @@ const MyPlanCard = () => {
         setPlanToday((prev: IExercise[]) =>
             prev.filter((item: IExercise) => item.id !== id),
         );
-        toast.info("Your card has been removedf");
+        toast.info("Your card has been removed.", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
     };
     const handleToastRemove2 = (id: number) => {
         setPlanSaved((prev: IExercise[]) =>
             prev.filter((item: IExercise) => item.id !== id),
         );
-        toast.info("Your card has been removedf");
+        toast.info("Your card has been removed.", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
+    };
+    const handleShowtoast = () => {
+        toast.info(" You have completed your workout.", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
     };
 
     return (
@@ -136,7 +166,10 @@ const MyPlanCard = () => {
                                           </button>
                                       </Link>
 
-                                      <button className="flex items-center gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-full bg-lime-400 text-black text-xs sm:text-sm font-bold hover:bg-lime-300 transition-colors">
+                                      <button
+                                          onClick={() => handleShowtoast()}
+                                          className="flex items-center gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-full bg-lime-400 text-black text-xs sm:text-sm font-bold hover:bg-lime-300 transition-colors"
+                                      >
                                           <span>✓</span>
                                           Mark as Done
                                       </button>
